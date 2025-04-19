@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
@@ -20,7 +21,16 @@ public class Testcase1 {
 
 		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 		
-		WebDriver driver = new ChromeDriver();
+		
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless=new"); // Use "--headless=new" for recent versions
+		options.addArguments("--no-sandbox");
+		options.addArguments("--disable-dev-shm-usage");
+		WebDriver driver = new ChromeDriver(options);
+
+		
+		
+	//	WebDriver driver = new ChromeDriver();
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -39,7 +49,18 @@ public class Testcase1 {
 	{
 		
 		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-		WebDriver driver = new ChromeDriver();
+		
+		
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless=new"); // Use "--headless=new" for recent versions
+		options.addArguments("--no-sandbox");
+		options.addArguments("--disable-dev-shm-usage");
+		WebDriver driver = new ChromeDriver(options);
+
+		
+		
+		
+		//WebDriver driver = new ChromeDriver();
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
