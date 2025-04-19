@@ -17,21 +17,8 @@ public class Testcase1 {
 	@Test
    public static void users()
 	{
-		
-		String os = System.getProperty("os.name").toLowerCase();
 
-		if (os.contains("win")) {
-		    System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\ChromeDriver.exe");
-		} else if (os.contains("nix") || os.contains("nux") || os.contains("mac")) {
-		    System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver"); // update this path if different
-		}
-
-		
-		
-		
-		
-		// System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\ChromeDriver.exe");
-		//System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 		
 		WebDriver driver = new ChromeDriver();
 		driver.manage().deleteAllCookies();
@@ -51,7 +38,7 @@ public class Testcase1 {
 	public void users2()
 	{
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\ChromeDriver.exe");
+		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
